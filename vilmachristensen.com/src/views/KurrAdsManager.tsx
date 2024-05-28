@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import Colors from '../styles/Colors';
 import TextSection from '../components/TextSection';
 
-const Home: React.FC = () => {
+const KurrAdsManager: React.FC = () => {
 
     return (
         <Content>
@@ -30,4 +30,4 @@ background-color: ${Colors.white};
 `;
 
 
-export default Home;
+export default KurrAdsManager;

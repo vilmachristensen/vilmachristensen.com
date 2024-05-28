@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import Actus from '../assets/Actus_mockup.png'
 import FoodMap from '../assets/FoodMap_mockup.png'
 import HotSpot from '../assets/HotSpot_mockup.png'
@@ -22,33 +23,37 @@ const projectContent: { [key: string]: { header: string, text: string, img: stri
   "Recipes2Rescue": { header: "Recipes2Rescue", text: "Figma | Google Forms", img: Recipes2Rescue, gradientColor1: "#BBCE8A", gradientColor2: "#FFFBDB" },
 };
 
-const getProjectContent = (name: string) => {
-  const project = projectContent[name];
-  return (
-    <Card gradientColor1={project.gradientColor1} gradientColor2={project.gradientColor2}>
-        <img src={project.img}  alt={project.header} style={{ justifySelf: "center", alignSelf:"center", maxWidth: "90%", maxHeight: "400px" }} />
-        <TextContent>
-        {name === "Kurr Ads Manager" || name === "Recipes2Rescue"  ?
-          <>
-            <Header_small_black>{project.header}</Header_small_black>
-            <Default_text_black>{project.text}</Default_text_black>
-          </>
-          :
-          <>
-            <Header_small_white>{project.header}</Header_small_white>
-            <Default_text_white>{project.text}</Default_text_white>
-          </>
-        }
-        </TextContent>
-    </Card>
-
-  );
-};
-
 const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (name === "Kurr Ads Manager") {
+      navigate('/KurrAdsManager');
+    }
+
+  }
+
+  const project = projectContent[name];
+
   return (
     <div>
-      {getProjectContent(name)}
+      <Card gradientColor1={project.gradientColor1} gradientColor2={project.gradientColor2} onClick={handleClick}>
+        <img src={project.img} alt={project.header} style={{ justifySelf: "center", alignSelf: "center", maxWidth: "90%", maxHeight: "400px" }} />
+        <TextContent>
+          {name === "Kurr Ads Manager" || name === "Recipes2Rescue" ?
+            <>
+              <Header_small_black>{project.header}</Header_small_black>
+              <Default_text_black>{project.text}</Default_text_black>
+            </>
+            :
+            <>
+              <Header_small_white>{project.header}</Header_small_white>
+              <Default_text_white>{project.text}</Default_text_white>
+            </>
+          }
+        </TextContent>
+      </Card>
     </div>
   );
 };
@@ -65,6 +70,7 @@ transition: transform 0.3s ease;
 
 &:hover {
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 `;

@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './views/Home';
+/*
+import { Route, Routes, useLocation } from 'react-router-dom';
+import KurrAdsManager from './views/KurrAdsManager';
+
+const App = () => {
+  const [activePage, setActivePage] = useState<string>('');
+  const location = useLocation();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location]);
+
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/KurrAdsManager" element={<KurrAdsManager />} />
+    </Routes>
+
+  );
+};
+*/
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
