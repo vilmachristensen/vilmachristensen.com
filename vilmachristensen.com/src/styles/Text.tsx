@@ -2,7 +2,22 @@ import styled from 'styled-components';
 import colors from './Colors';
 import "@fontsource/raleway";
 import "@fontsource/raleway/400.css";
+import "@fontsource/raleway/700.css";
 
+const Header = styled.text`
+  color: ${colors.white};
+  font-family: 'Raleway';
+  font-size: 70px;
+  line-space: 24px;
+  font-weight: 700;
+`;
+const Default_text_big = styled.text`
+    color: ${colors.white};
+    font-family: 'Raleway';
+    font-size: 25px;
+    line-space: 24px;
+    font-weight: 400;
+    `;
 
 const Header_small_white = styled.text`
     color: ${colors.white};
@@ -37,4 +52,4 @@ font-weight: 400;
 `;
 
 
-export { Header_small_white, Header_small_black, Default_text_white, Default_text_black };
+export { Header_small_white, Header, Default_text_big, Header_small_black, Default_text_white, Default_text_black };

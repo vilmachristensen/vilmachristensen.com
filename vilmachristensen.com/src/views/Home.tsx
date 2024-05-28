@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
+import Intro from '../components/Intro';
+import Footer from '../components/Footer';
+import Colors from '../styles/Colors';
 
 const Home: React.FC = () => {
 
     return (
         <Content>
             <Navbar></Navbar>
+            <Intro/>
             <ProjectGrid>
             <RowType1>
                 <ProjectCard name="Kurr Ads Manager"></ProjectCard>
@@ -22,18 +26,24 @@ const Home: React.FC = () => {
                 <ProjectCard name="Recipes2Rescue"></ProjectCard>
             </RowType1>
             </ProjectGrid>
+            <Footer/>
         </Content>
     )
 
 }
 
 const Content = styled.div`
-padding: 10%;
+display: grid; 
+grid-template-rows: auto auto auto auto auto; 
+gap: 20px;
+background-color: ${Colors.white};
 `;
 
 const ProjectGrid = styled.div`
 display: grid; 
 gap: 50px;
+// top, right, bottom, left
+padding: 0 10% 0 10%;
 `;
 
 const RowType1 = styled.div`
