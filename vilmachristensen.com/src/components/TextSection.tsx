@@ -119,6 +119,7 @@ const SectionGrid = styled.div`
 display: grid;
 grid-template-rows: auto auto auto; 
 gap: 0px;
+
 `;
 
 const Section = styled.div<{ backgroundColor: string }>`
@@ -130,6 +131,11 @@ gap: 90px;
 padding: 5% 10% 5% 10%;
 box-sizing: border-box;
 overflow: hidden; 
+
+@media (max-width: 700px) {
+    padding: 20% 10% 20% 10%;
+  }
+
 `;
 
 const Upper = styled.div`
@@ -142,6 +148,12 @@ const Lower = styled.div`
 display: grid;
 grid-template-columns: 33% 33% 33%; 
 gap: 100px;
+
+@media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
 `;
 
 const InnerGrid = styled.div`
@@ -161,6 +173,12 @@ display: grid;
 grid-template-columns: 0.8fr 1.2fr; 
 grid-template-rows: 1fr; 
 gap: 20px 50px; 
+
+@media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
 `;
 
 const RowType2 = styled.div`
@@ -168,6 +186,11 @@ display: grid;
 grid-template-columns: 1.5fr 0.5fr; 
 grid-template-rows: 1fr; 
 gap: 20px 50px; 
+
+@media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 `;
 
 export default TextSection;

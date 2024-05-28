@@ -25,11 +25,11 @@ const projectContent: { [key: string]: { header: string, text: string, img: stri
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {
 
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
 
   const handleClick = () => {
     if (name === "Kurr Ads Manager") {
-      navigate('/KurrAdsManager');
+      //navigate('/KurrAdsManager');
     }
 
   }
