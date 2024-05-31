@@ -69,7 +69,7 @@ const Left = styled.div`
   grid-template-rows: auto auto;
   gap: 20px;
   padding-top: 10%;
-  padding-bottom: 25%;
+  padding-bottom: 35%;
   padding-left: 10%;
 
   @media (max-width: 560px) {

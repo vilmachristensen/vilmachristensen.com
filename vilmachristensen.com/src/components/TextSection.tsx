@@ -16,10 +16,12 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                 <Section backgroundColor={Colors.white}>
                     <Upper>
                         <Header_medium_black>Get to know me</Header_medium_black>
-                        <Default_text_black>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tellus velit,
-                            fringilla ac orci id, interdum blandit purus. Vivamus ullamcorper facilisis velit,
-                            eget consequat mauris cursus sed. Etiam mauris orci, sollicitudin ut eros et, luctus
-                            maximus elit. Nullam ac pharetra ex. </Default_text_black>
+                        <Default_text_black>Growing up, I was the girl who loved designing and developing blogs for both myself and my friends. Today,
+                            I realize that what I was doing was HTML and CSS. This is one of the reasons why I chose to pursue my
+                            studies in an M.Sc. in Engineering in Interaction, Technology, and Design at Umeå University.
+                            Another reason is the perfect combination of design and creative thinking with mathematics, programming,
+                            and problem-solving. As I approach my final year, I am more than happy with my choice and can't wait to work 
+                            with what I love to do!</Default_text_black>
                     </Upper>
                     <Lower>
                         <InnerGrid>
@@ -28,10 +30,10 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                             </Header_small_black>
                             <Default_text_black>
                                 M.Sc in Engineering in Interaction, Technology and Design,<br></br>
-                                Umeå University
+                                <i>Umeå University</i>
                                 <br></br><br></br>
                                 Exchange semester,<br></br>
-                                Northern Arizona University
+                                <i>Northern Arizona University</i>
                             </Default_text_black>
                         </InnerGrid>
                         <InnerGrid>
@@ -61,6 +63,8 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                                 <br></br><br></br>
                                 React
                                 <br></br><br></br>
+                                React Native
+                                <br></br><br></br>
                                 Git
                                 <br></br><br></br>
                                 SQL
@@ -69,7 +73,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                                 <br></br><br></br>
                                 CSS
                                 <br></br><br></br>
-                                OOP in Java
+                                OOP
                             </Default_text_black>
                         </InnerGrid>
                     </Lower>
@@ -78,10 +82,8 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                 <Section backgroundColor={Colors.light_grey}>
                     <Upper>
                         <Header_medium_black>Projects</Header_medium_black>
-                        <Default_text_black>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tellus velit,
-                            fringilla ac orci id, interdum blandit purus. Vivamus ullamcorper facilisis velit,
-                            eget consequat mauris cursus sed. Etiam mauris orci, sollicitudin ut eros et, luctus
-                            maximus elit. Nullam ac pharetra ex.
+                        <Default_text_black>During my studies, I have engaged in various projects. I have developed skills in both 
+                            front-end and back-end development, UX/UI design, and working with SCRUM and agile project management
                         </Default_text_black>
                     </Upper>
                     <ProjectGrid>
@@ -103,10 +105,13 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                 <Section backgroundColor={Colors.navy}>
                     <Upper>
                         <Header_medium_white>Let's stay in touch</Header_medium_white>
-                        <Default_text_white>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tellus velit,
-                            fringilla ac orci id, interdum blandit purus. Vivamus ullamcorper facilisis velit,
-                            eget consequat mauris cursus sed. Etiam mauris orci, sollicitudin ut eros et, luctus
-                            maximus elit. Nullam ac pharetra ex.
+                        <Default_text_white>
+                            <b>Mail:</b> vilma.m.christensen@gmail.com
+                            <br></br>
+                            <b>Phone</b> +46 70 39 54 44 8
+                            <br></br>
+                            <b>LinkedIn</b> vilma.m.christensen@gmail.com
+                            <br></br>
                         </Default_text_white>
                     </Upper>
                 </Section>

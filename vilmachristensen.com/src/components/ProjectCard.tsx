@@ -64,7 +64,7 @@ grid-template-rows: 1fr auto;
 height: 584px;
 width: inherit;
 border-radius: 20px;
-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 background-image: linear-gradient(170deg, ${(props) => (props.gradientColor1)}, ${(props) => (props.gradientColor2)});
 transition: transform 0.3s ease;
 
