@@ -42,7 +42,7 @@ const Default_text_big_white = styled.text`
     font-weight: 400;
     `;
 
-    const Default_text_big_black = styled.text`
+const Default_text_big_black = styled.text`
     color: ${colors.black};
     font-family: 'Raleway';
     font-size: 25px;
@@ -98,5 +98,13 @@ line-height: 32px;
 font-weight: 400;
 `;
 
+const Footer_text = styled.text`
+  color: ${colors.white};
+  font-family: 'Raleway';
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+`;
 
-export { Header_small_white, Header_white, Header_black, Header_responsive_white, Header_responsive_black, Default_text_big_white, Default_text_big_black, Header_medium_black, Header_medium_white, Header_small_black, Default_text_white, Default_text_black };
+
+export { Header_small_white, Header_white, Header_black, Header_responsive_white, Header_responsive_black, Default_text_big_white, Default_text_big_black, Header_medium_black, Header_medium_white, Header_small_black, Default_text_white, Default_text_black, Footer_text };

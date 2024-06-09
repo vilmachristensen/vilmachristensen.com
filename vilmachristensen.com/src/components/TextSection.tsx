@@ -112,11 +112,10 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
                     <Upper>
                         <Header_medium_white>Let's stay in touch</Header_medium_white>
                         <Default_text_white>
+                            Send me an email or write me a DM at LinkedIn!<br></br>
                             <b>Mail:</b> vilma.m.christensen@gmail.com
                             <br></br>
-                            <b>Phone</b> +46 70 39 54 44 8
-                            <br></br>
-                            <b>LinkedIn</b> vilma.m.christensen@gmail.com
+                            <b>LinkedIn:</b> vilma.m.christensen@gmail.com
                             <br></br>
                         </Default_text_white>
                     </Upper>

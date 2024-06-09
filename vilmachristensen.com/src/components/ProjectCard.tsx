@@ -24,7 +24,7 @@ const projectContent: { [key: string]: { header: string, text: string, img: stri
   "UmeaStigen": { header: "Umeå Stigen", text: "React | JavaScript | MapBox API | Umeå API", img: UmeaStigen, gradientColor1: "#606951", gradientColor2: "#ACB597" },
   "Recipes2Rescue": { header: "Recipes2Rescue", text: "Figma | Google Forms", img: Recipes2Rescue, gradientColor1: "#BBCE8A", gradientColor2: "#FFFBDB" },
   "LandLog": { header: "LandLog", text: "Raspberry Pi | Mongoose OS | ESP32 | Node-RED | JavaScript", img: LandLog, gradientColor1: "#3B708F", gradientColor2: "#A3E1F0" },
-  "Luckan": { header: "Luckan", text: "Figma | Google Forms", img: Luckan, gradientColor1: "#8172AB", gradientColor2: "#F2F0F9" },
+  "Luckan": { header: "Luckan", text: "Figma | Google Forms", img: Luckan, gradientColor1: "#8172AB", gradientColor2: "#DFDAF1" },
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {

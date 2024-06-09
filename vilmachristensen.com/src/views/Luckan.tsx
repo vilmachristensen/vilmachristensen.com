@@ -17,7 +17,7 @@ const Luckan: React.FC = () => {
             course='Design for user experience'
             tools='Figma, Google Forms'
             gradientColor1='#8172AB'
-            gradientColor2='#F2F0F9'
+            gradientColor2='#DFDAF1'
             picture={LuckanMockup} />
             <TextSection contentType='Luckan' designText='Detta är en design text' developText='Detta är en develop text'/>
             <Footer />
