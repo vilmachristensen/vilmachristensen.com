@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     return (
         <Content>
             <Navbar></Navbar>
-            <Intro/>
+            <Intro contentType='Profile'/>
             <TextSection contentType='GetToKnow'/>
             <TextSection contentType='Projects'/>
             <TextSection contentType='Contact'/>

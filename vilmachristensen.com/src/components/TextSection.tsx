@@ -6,9 +6,11 @@ import ProjectCard from './ProjectCard';
 
 interface TextSectionProps {
     contentType: string,
+    designText?: string,
+    developText?: string,
 }
 
-const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
+const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, developText }) => {
 
     return (
         <SectionGrid>
@@ -20,7 +22,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                             I realize that what I was doing was HTML and CSS. This is one of the reasons why I chose to pursue my
                             studies in an M.Sc. in Engineering in Interaction, Technology, and Design at Umeå University.
                             Another reason is the perfect combination of design and creative thinking with mathematics, programming,
-                            and problem-solving. As I approach my final year, I am more than happy with my choice and can't wait to work 
+                            and problem-solving. As I approach my final year, I am more than happy with my choice and can't wait to work
                             with what I love to do!</Default_text_black>
                     </Upper>
                     <Lower>
@@ -82,7 +84,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                 <Section backgroundColor={Colors.light_grey}>
                     <Upper>
                         <Header_medium_black>Projects</Header_medium_black>
-                        <Default_text_black>During my studies, I have engaged in various projects. I have developed skills in both 
+                        <Default_text_black>During my studies, I have engaged in various projects. I have developed skills in both
                             front-end and back-end development, UX/UI design, and working with SCRUM and agile project management
                         </Default_text_black>
                     </Upper>
@@ -96,12 +98,16 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                             <ProjectCard name="FoodMap"></ProjectCard>
                         </RowType2>
                         <RowType1>
-                            <ProjectCard name="Umeå Stigen"></ProjectCard>
+                            <ProjectCard name="UmeaStigen"></ProjectCard>
                             <ProjectCard name="Recipes2Rescue"></ProjectCard>
                         </RowType1>
+                        <RowType2>
+                            <ProjectCard name="LandLog"></ProjectCard>
+                            <ProjectCard name="Luckan"></ProjectCard>
+                        </RowType2>
                     </ProjectGrid>
                 </Section>
-            ) : (
+            ) : contentType === "Contact" ? (
                 <Section backgroundColor={Colors.navy}>
                     <Upper>
                         <Header_medium_white>Let's stay in touch</Header_medium_white>
@@ -115,6 +121,18 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType }) => {
                         </Default_text_white>
                     </Upper>
                 </Section>
+            ) : (
+                <><Section backgroundColor={Colors.white}>
+                    <Upper>
+                        <Header_medium_black>Designing</Header_medium_black>
+                        <Default_text_black>{designText}</Default_text_black>
+                    </Upper>
+                </Section><Section backgroundColor={Colors.light_grey}>
+                        <Upper>
+                            <Header_medium_black>Developing</Header_medium_black>
+                            <Default_text_black>{developText}</Default_text_black>
+                        </Upper>
+                    </Section></>
             )}
         </SectionGrid>
     )

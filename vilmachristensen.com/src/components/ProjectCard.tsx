@@ -7,6 +7,8 @@ import HotSpot from '../assets/HotSpot_mockup.png'
 import KurrAdsManager from '../assets/KurrAdsManager_mockup.png'
 import Recipes2Rescue from '../assets/Recipes2Rescue_mockup.png'
 import UmeaStigen from '../assets/UmeaStigen_mockup.png'
+import LandLog from '../assets/LandLog_mockup.png'
+import Luckan from '../assets/Luckan_mockup.png'
 import { Header_small_white, Header_small_black, Default_text_white, Default_text_black } from '../styles/Text';
 
 
@@ -19,17 +21,45 @@ const projectContent: { [key: string]: { header: string, text: string, img: stri
   "Kurr Ads Manager": { header: "Kurr Ads Manager", text: "React | TypeScript | Figma | Git", img: KurrAdsManager, gradientColor1: "#FF9B7F", gradientColor2: "#FED9CF" },
   "HotSpot": { header: "HotSpot", text: "React Native | Expo | Google Maps API | TypeScript | Firebase | Git | SCRUM", img: HotSpot, gradientColor1: "#D03853", gradientColor2: "#E2977D" },
   "FoodMap": { header: "FoodMap", text: "Android Studio | Kotlin", img: FoodMap, gradientColor1: "#7D1B2F", gradientColor2: "#C96B7E" },
-  "Umeå Stigen": { header: "Umeå Stigen", text: "React | JavaScript | MapBox API | Umeå API", img: UmeaStigen, gradientColor1: "#606951", gradientColor2: "#ACB597" },
+  "UmeaStigen": { header: "Umeå Stigen", text: "React | JavaScript | MapBox API | Umeå API", img: UmeaStigen, gradientColor1: "#606951", gradientColor2: "#ACB597" },
   "Recipes2Rescue": { header: "Recipes2Rescue", text: "Figma | Google Forms", img: Recipes2Rescue, gradientColor1: "#BBCE8A", gradientColor2: "#FFFBDB" },
+  "LandLog": { header: "LandLog", text: "Raspberry Pi | Mongoose OS | ESP32 | Node-RED | JavaScript", img: LandLog, gradientColor1: "#3B708F", gradientColor2: "#A3E1F0" },
+  "Luckan": { header: "Luckan", text: "Figma | Google Forms", img: Luckan, gradientColor1: "#8172AB", gradientColor2: "#F2F0F9" },
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {
 
- // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleClick = () => {
-    if (name === "Kurr Ads Manager") {
-      //navigate('/KurrAdsManager');
+
+    switch (name) {
+      case "Kurr Ads Manager":
+        navigate('/KurrAdsManager');
+        break;
+      case "Actus":
+        navigate('/Actus');
+        break;
+      case "HotSpot":
+        navigate('/HotSpot');
+        break;
+      case "FoodMap":
+        navigate('/FoodMap');
+        break;
+      case "UmeaStigen":
+        navigate('/UmeaStigen');
+        break;
+      case "Recipes2Rescue":
+        navigate('/Recipes2Rescue');
+        break;
+      case "Luckan":
+        navigate('/Luckan');
+        break;
+      case "LandLog":
+        navigate('/LandLog');
+        break;
+      default:
+        break;
     }
 
   }
@@ -41,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {
       <Card gradientColor1={project.gradientColor1} gradientColor2={project.gradientColor2} onClick={handleClick}>
         <img src={project.img} alt={project.header} style={{ justifySelf: "center", alignSelf: "center", maxWidth: "90%", maxHeight: "400px" }} />
         <TextContent>
-          {name === "Kurr Ads Manager" || name === "Recipes2Rescue" ?
+          {name === "Kurr Ads Manager" || name === "Recipes2Rescue" || name === "LandLog" || name === "Luckan" ?
             <>
               <Header_small_black>{project.header}</Header_small_black>
               <Default_text_black>{project.text}</Default_text_black>
