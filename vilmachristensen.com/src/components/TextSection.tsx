@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Colors from '../styles/Colors';
 import { Default_text_black, Default_text_white, Header_medium_black, Header_medium_white, Header_small_black } from '../styles/Text';
 import ProjectCard from './ProjectCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 interface TextSectionProps {
     contentType: string,
@@ -11,6 +14,18 @@ interface TextSectionProps {
 }
 
 const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, developText }) => {
+
+    const handleClick = (type: string) => {
+        if (type === "LinkedIn") {
+            window.location.href = 'https://linkedin.com/in/vilma-christensen-10a335231';
+        }
+        else if (type === "Mail") {
+            window.location.href = 'mailto:vilma.m.christensen@gmail.com';
+        }
+        else {
+            window.location.href = 'https://github.com/vilmachristensen';
+        }
+    }
 
     return (
         <SectionGrid>
@@ -112,11 +127,19 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
                     <Upper>
                         <Header_medium_white>Let's stay in touch</Header_medium_white>
                         <Default_text_white>
-                            Send me an email or write me a DM at LinkedIn!<br></br>
-                            <b>Mail:</b> vilma.m.christensen@gmail.com
-                            <br></br>
-                            <b>LinkedIn:</b> vilma.m.christensen@gmail.com
-                            <br></br>
+                            Feel free to reach out via email or message me on LinkedIn. I always enjoy connecting with new people and hearing about exciting opportunities 😄
+                            <br></br><br></br>
+                            <Contact>
+                                <InnerContact onClick={() => handleClick('Mail')}>
+                                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} style={{ paddingRight: '20px' }} />vilma.m.christensen@gmail.com
+                                </InnerContact>
+                                <InnerContact onClick={() => handleClick('LinkedIn')}>
+                                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faLinkedinIn} style={{ paddingRight: '20px' }} />LinkedIn
+                                </InnerContact>
+                                <InnerContact onClick={() => handleClick('GitHub')}>
+                                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faGithub} style={{ paddingRight: '20px' }} />GitHub
+                                </InnerContact>
+                            </Contact>
                         </Default_text_white>
                     </Upper>
                 </Section>
@@ -213,6 +236,23 @@ gap: 20px 50px;
     grid-template-columns: 1fr;
     gap: 40px;
   }
+`;
+
+const Contact = styled.div`
+display: grid; 
+grid-template-rows: auto auto auto; 
+gap: 20px; 
+
+@media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+`;
+
+const InnerContact = styled.div`
+text-decoration: underline;
+cursor: pointer;
 `;
 
 export default TextSection;

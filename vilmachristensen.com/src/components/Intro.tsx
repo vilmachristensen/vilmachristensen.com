@@ -130,7 +130,7 @@ const Left = styled.div`
 
   @media (max-width: 560px) {
     position: relative;
-    padding-top: 40%;
+    padding-top: 90%;
   }
 `;
 
@@ -150,6 +150,11 @@ max-height: 100%;
 position: absolute;
 right: ${(props) => (props.content == "Kurr Ads Manager" ? '5%' : props.content == "FoodMap" || props.content == "HotSpot" ? '10%' : '5%')};
 top: ${(props) => (props.content == "LandLog" ? '-16%' : '-5%')};
+
+@media (max-width: 560px) {
+max-width: ${(props) => (props.content == "FoodMap" ? '30%' : props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" || props.content == "LandLog" || props.content == "Luckan" || props.content == "Actus" ? '60%' : '50%')};
+top: ${(props) => (props.content == "LandLog" ? '-8%' : '-5%')};
+  }
 `;
 
 export default Intro;
