@@ -32,8 +32,8 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
             {contentType === "GetToKnow" ? (
                 <Section backgroundColor={Colors.white}>
                     <Upper>
-                        <Header_medium_black>Get to know me</Header_medium_black>
-                        <Default_text_black>Growing up, I was the girl who loved designing and developing blogs for both myself and my friends. Today,
+                        <Header_medium_black>Growing up...</Header_medium_black>
+                        <Default_text_black>...I was the girl who loved designing and developing blogs for both myself and my friends. Today,
                             I realize that what I was doing was HTML and CSS. This is one of the reasons why I chose to pursue my
                             studies in an M.Sc. in Engineering in Interaction, Technology, and Design at Umeå University.
                             Another reason is the perfect combination of design and creative thinking with mathematics, programming,
@@ -66,7 +66,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
                                 <br></br><br></br>
                                 Creating user-friendly services
                                 <br></br><br></br>
-                                Learning new things
+                                Making society better through technology
                             </Default_text_black>
                         </InnerGrid>
                         <InnerGrid>
@@ -90,7 +90,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
                                 <br></br><br></br>
                                 CSS
                                 <br></br><br></br>
-                                OOP
+                                Object Oriented Programming
                             </Default_text_black>
                         </InnerGrid>
                     </Lower>
@@ -127,7 +127,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, designText, deve
                     <Upper>
                         <Header_medium_white>Let's stay in touch</Header_medium_white>
                         <Default_text_white>
-                            Feel free to reach out via email or message me on LinkedIn. I always enjoy connecting with new people and hearing about exciting opportunities 😄
+                            Feel free to send me an email or a DM on LinkedIn 😄
                             <br></br><br></br>
                             <Contact>
                                 <InnerContact onClick={() => handleClick('Mail')}>
@@ -252,7 +252,12 @@ gap: 20px;
 
 const InnerContact = styled.div`
 text-decoration: underline;
-cursor: pointer;
+
+&:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
 `;
 
 export default TextSection;

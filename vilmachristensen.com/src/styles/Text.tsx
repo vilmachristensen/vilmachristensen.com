@@ -7,7 +7,7 @@ import "@fontsource/raleway/700.css";
 const Header_white = styled.text`
   color: ${colors.white};
   font-family: 'Raleway';
-  font-size: 70px;
+  font-size: 65px;
   font-weight: 700;
 `;
 

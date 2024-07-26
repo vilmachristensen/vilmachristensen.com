@@ -22,21 +22,34 @@ const Footer: React.FC = () => {
         <Content>
             <Left>
                 <InnerLeft onClick={() => handleClick('LinkedIn')}>
-                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faLinkedinIn} /> <Footer_text style={{textDecoration: 'underline'}}>LinkedIn</Footer_text>
+                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faLinkedinIn} /> <Footer_text style={{ textDecoration: 'underline' }}>LinkedIn</Footer_text>
                 </InnerLeft>
                 <InnerLeft onClick={() => handleClick('Mail')}>
-                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} /> <Footer_text style={{textDecoration: 'underline'}}>vilma.m.christensen@gmail.com</Footer_text>
+                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} /> <Footer_text style={{ textDecoration: 'underline' }}>vilma.m.christensen@gmail.com</Footer_text>
                 </InnerLeft>
             </Left>
+            <Right>
+            <Footer_text>Made by Vilma Christensen</Footer_text>
+            </Right>
         </Content>
     )
 }
 
 const Content = styled.div`
-display: grid; 
-grid-template-rows: auto auto; 
-gap: 0px;
+display: flex; 
+justify-content: space-between;
+align-items: baseline;
 background-color: ${Colors.navy};
+padding-right: 5%;
+
+@media (max-width: 560px) {
+    display: grid;
+    grid-template-rows: auto auto; 
+    justify-content: center; 
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+
 `;
 
 const Left = styled.div`
@@ -55,11 +68,21 @@ padding-top: 2%;
 
 `;
 
+const Right = styled.div`
+
+@media (max-width: 560px) {
+    justify-self: center; 
+  }
+`;
+
 const InnerLeft = styled.div`
 display: flex;
 align-items: center;
 gap: 10px;
-cursor: pointer;
+&:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
 `;
 
 export default Footer;
