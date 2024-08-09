@@ -28,8 +28,6 @@ const Footer: React.FC = () => {
                     <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} /> <Footer_text style={{ textDecoration: 'underline' }}>vilma.m.christensen@gmail.com</Footer_text>
                 </InnerLeft>
             </Left>
-            <Right>
-            </Right>
         </Content>
     )
 }
@@ -40,14 +38,6 @@ justify-content: space-between;
 align-items: baseline;
 background-color: ${Colors.navy};
 padding-right: 5%;
-
-@media (max-width: 560px) {
-    display: grid;
-    grid-template-rows: auto auto; 
-    justify-content: center; 
-    padding-bottom: 5%;
-    padding-top: 5%;
-  }
 
 `;
 
@@ -61,17 +51,13 @@ padding-bottom: 2%;
 padding-top: 2%;
 
 @media (max-width: 560px) {
+    display: grid;
+    grid-template-rows: auto auto; 
     justify-content: center; 
-    padding-left: 0;
+    padding-bottom: 5%;
+    padding-top: 5%;
   }
 
-`;
-
-const Right = styled.div`
-
-@media (max-width: 560px) {
-    justify-self: center; 
-  }
 `;
 
 const InnerLeft = styled.div`

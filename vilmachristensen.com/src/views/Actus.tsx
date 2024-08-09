@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
@@ -11,6 +11,10 @@ import ActusResults1 from '../assets/Actus/Actus_results1.png'
 import ActusResults2 from '../assets/Actus/Actus_results2.png'
 
 const Actus: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <Content>

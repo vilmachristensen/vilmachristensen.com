@@ -40,7 +40,7 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
         <Content>
             {contentType == "Profile" ?
                 <><Section content='Profile' gradientColor1={Colors.navy} gradientColor2={Colors.navy}>
-                    <Left>
+                    <Left content={contentType}>
                         {windowWidth < 800 ?
                             <><Header_responsive_white>Hi,
                                 <br></br>
@@ -58,9 +58,9 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
                                 </Default_text_big_white></>}
                     </Left>
                 </Section><ProfilePicture src={Profilepicture} /></>
-                : (contentType === "Kurr Ads Manager" || contentType === "Recipes2Rescue" || contentType === "Luckan") ?
+                : (contentType === "Kurr Ads Manager" || contentType === "Recipes2Rescue") ?
                     <><Section content='Project' gradientColor1={gradientColor1 || ''} gradientColor2={gradientColor2 || ''} >
-                        <Left>
+                        <Left content={contentType}>
                             {windowWidth < 800 ?
                                 <><Header_responsive_black>{header}</Header_responsive_black>
                                     <Default_text_black>
@@ -87,7 +87,7 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
                     </Section><Picture content={contentType} src={picture} /></>
 
                     : <><Section content='Project' gradientColor1={gradientColor1 || ''} gradientColor2={gradientColor2 || ''} >
-                        <Left>
+                        <Left content={contentType}>
                             {windowWidth < 800 ?
                                 <><Header_responsive_white>{header}</Header_responsive_white>
                                     <Default_text_white>
@@ -135,7 +135,7 @@ background-image: linear-gradient(170deg, ${(props) => (props.gradientColor1)}, 
 position: relative;
 `;
 
-const Left = styled.div`
+const Left = styled.div<{ content: string }>`
   display: grid;
   grid-template-rows: auto auto;
   gap: 20px;
@@ -145,7 +145,7 @@ const Left = styled.div`
 
   @media (max-width: 560px) {
     position: relative;
-    padding-top: 90%;
+    padding-top: ${(props) => (props.content == "FoodMap" || props.content == "HotSpot" ? '120%' : '90%')};
   }
 `;
 
@@ -172,7 +172,7 @@ top: ${(props) => (props.content == "LandLog" ? '-16%' : '-5%')};
 
 @media (max-width: 560px) {
 max-width: ${(props) => (props.content == "FoodMap" ? '30%' : props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" || props.content == "LandLog" || props.content == "Luckan" || props.content == "Actus" ? '60%' : '50%')};
-top: ${(props) => (props.content == "LandLog" ? '-8%' : '-5%')};
+top: ${(props) => (props.content == "LandLog" ? '-5%' : '-2%')};
   }
 `;
 

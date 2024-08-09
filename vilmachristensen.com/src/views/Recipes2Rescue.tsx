@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
@@ -11,6 +11,10 @@ import Recipes2RescueResult1 from '../assets/Recipes2Rescue/Recipes2Rescue_resul
 import Recipes2RescueResult2 from '../assets/Recipes2Rescue/Recipes2Rescue_results2.png';
 
 const Recipes2Rescue: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <Content>

@@ -209,8 +209,15 @@ gap: 30px;
 const Results = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr; 
+padding-top: 2%;
 width: 100%; 
 gap: 20px; 
+
+@media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
 `;
 
 const Lower = styled.div`

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
@@ -11,6 +11,10 @@ import LuckanResult1 from '../assets/Luckan/Luckan_results1.png';
 import LuckanResult2 from '../assets/Luckan/Luckan_results2.png';
 
 const Luckan: React.FC = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <Content>

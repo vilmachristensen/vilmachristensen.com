@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import Navbar from '../components/Navbar';
@@ -12,6 +12,10 @@ import LandLogResult2 from '../assets/LandLog/LandLog_result2.png';
 
 const LandLog: React.FC = () => {
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+      
     return (
         <Content>
             <Navbar></Navbar>
