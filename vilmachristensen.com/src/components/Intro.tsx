@@ -5,13 +5,14 @@ import {
     Header_white, Header_black, Header_medium_black, Header_medium_white, Header_responsive_white,
     Header_responsive_black
 } from '../styles/Text';
-import Profilepicture from '../assets/Profilbild.jpg';
+import Profilepicture from '../assets/Profile_picture.jpg'
 import Colors from '../styles/Colors';
 
 
 interface IntroProps {
     contentType: string,
     header?: string,
+    info?: string,
     course?: string,
     tools?: string,
     gradientColor1?: string,
@@ -19,7 +20,7 @@ interface IntroProps {
     picture?: any,
 }
 
-const Intro: React.FC<IntroProps> = ({ contentType, header, course, tools, gradientColor1, gradientColor2, picture }) => {
+const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools, gradientColor1, gradientColor2, picture }) => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -45,14 +46,14 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, course, tools, gradi
                                 <br></br>
                                 I’m Vilma Christensen</Header_responsive_white>
                                 <Default_text_white>
-                                    A passionate (and a bit nerdy 🤓) learner that loves front-end
+                                    A passionate (and nerdy 🤓) learner who enjoys front-end
                                     development and making services easier to use
                                 </Default_text_white></>
                             :
                             <><Header_white>Hi,
                                 <br></br>
                                 I’m Vilma Christensen</Header_white><Default_text_big_white>
-                                    A passionate (and a bit nerdy 🤓) learner that loves front-end
+                                    A passionate (and nerdy 🤓) learner who enjoys front-end
                                     development and making services easier to use
                                 </Default_text_big_white></>}
                     </Left>
@@ -63,15 +64,22 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, course, tools, gradi
                             {windowWidth < 800 ?
                                 <><Header_responsive_black>{header}</Header_responsive_black>
                                     <Default_text_black>
+                                        <i>{info}</i>
+                                    </Default_text_black>
+                                    <Default_text_black>
                                         <b>Course:</b> {course}
                                     </Default_text_black>
                                     <Default_text_black>
                                         <b>Tools:</b> {tools}
                                     </Default_text_black></>
                                 :
-                                <><Header_black>{header}</Header_black><Default_text_big_black>
-                                    <b>Course:</b> {course}
-                                </Default_text_big_black>
+                                <><Header_black>{header}</Header_black>
+                                    <Default_text_big_black>
+                                        <i>{info}</i>
+                                    </Default_text_big_black>
+                                    <Default_text_big_black>
+                                        <b>Course:</b> {course}
+                                    </Default_text_big_black>
                                     <Default_text_big_black>
                                         <b>Tools:</b> {tools}
                                     </Default_text_big_black></>}
@@ -83,15 +91,22 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, course, tools, gradi
                             {windowWidth < 800 ?
                                 <><Header_responsive_white>{header}</Header_responsive_white>
                                     <Default_text_white>
+                                        <i>{info}</i>
+                                    </Default_text_white>
+                                    <Default_text_white>
                                         <b>Course:</b> {course}
                                     </Default_text_white>
                                     <Default_text_white>
                                         <b>Tools:</b> {tools}
                                     </Default_text_white></>
                                 :
-                                <><Header_white>{header}</Header_white><Default_text_big_white>
-                                    <b>Course:</b> {course}
-                                </Default_text_big_white>
+                                <><Header_white>{header}</Header_white>
+                                    <Default_text_big_white>
+                                        <i>{info}</i>
+                                    </Default_text_big_white>
+                                    <Default_text_big_white>
+                                        <b>Course:</b> {course}
+                                    </Default_text_big_white>
                                     <Default_text_big_white>
                                         <b>Tools:</b> {tools}
                                     </Default_text_big_white></>}
@@ -125,7 +140,7 @@ const Left = styled.div`
   grid-template-rows: auto auto;
   gap: 20px;
   padding-top: 10%;
-  padding-bottom: 35%;
+  padding-bottom: 32%;
   padding-left: 13%;
 
   @media (max-width: 560px) {
@@ -136,7 +151,7 @@ const Left = styled.div`
 
 const ProfilePicture = styled.img`
 border-radius: 40px;
-width: 30%;
+width: 28%;
 position: absolute;
 right: 7%;
 top: -5%; 

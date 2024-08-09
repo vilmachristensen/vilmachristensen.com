@@ -7,14 +7,14 @@ import "@fontsource/raleway/700.css";
 const Header_white = styled.text`
   color: ${colors.white};
   font-family: 'Raleway';
-  font-size: 65px;
+  font-size: 60px;
   font-weight: 700;
 `;
 
 const Header_black = styled.text`
   color: ${colors.black};
   font-family: 'Raleway';
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
 `;
 
@@ -37,7 +37,7 @@ const Header_responsive_black = styled.text`
 const Default_text_big_white = styled.text`
     color: ${colors.white};
     font-family: 'Raleway';
-    font-size: 25px;
+    font-size: 22px;
     line-height: 32px;
     font-weight: 400;
     `;
@@ -45,15 +45,15 @@ const Default_text_big_white = styled.text`
 const Default_text_big_black = styled.text`
     color: ${colors.black};
     font-family: 'Raleway';
-    font-size: 25px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 32px;
     font-weight: 400;
     `;
 
 const Header_medium_black = styled.text`
     color: ${colors.black};
     font-family: 'Raleway';
-    font-size: 50px;
+    font-size: 45px;
     line-height: 32px;
     font-weight: 700;
   `;
@@ -61,7 +61,7 @@ const Header_medium_black = styled.text`
 const Header_medium_white = styled.text`
     color: ${colors.white};
     font-family: 'Raleway';
-    font-size: 50px;
+    font-size: 45px;
     line-height: 32px;
     font-weight: 700;
   `;
@@ -69,7 +69,7 @@ const Header_medium_white = styled.text`
 const Header_small_white = styled.text`
     color: ${colors.white};
     font-family: 'Raleway';
-    font-size: 25px;
+    font-size: 22px;
     line-height: 32px;
     font-weight: 700;
   `;
@@ -77,7 +77,7 @@ const Header_small_white = styled.text`
 const Header_small_black = styled.text`
   color: ${colors.black};
   font-family: 'Raleway';
-  font-size: 25px;
+  font-size: 22px;
   line-height: 32px;
   font-weight: 700;
 `;
@@ -85,16 +85,16 @@ const Header_small_black = styled.text`
 const Default_text_white = styled.text`
   color: ${colors.white};
   font-family: 'Raleway';
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 27px;
   font-weight: 400;
 `;
 
 const Default_text_black = styled.text`
 color: ${colors.black};
 font-family: 'Raleway';
-font-size: 20px;
-line-height: 32px;
+font-size: 18px;
+line-height: 27px;
 font-weight: 400;
 `;
 
@@ -102,7 +102,7 @@ const Footer_text = styled.text`
   color: ${colors.white};
   font-family: 'Raleway';
   font-size: 16px;
-  line-height: 32px;
+  line-height: 24px;
   font-weight: 400;
 `;
 

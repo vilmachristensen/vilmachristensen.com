@@ -13,8 +13,8 @@ const Home: React.FC = () => {
         <Content>
             <Navbar></Navbar>
             <Intro contentType='Profile'/>
-            <TextSection contentType='GetToKnow'/>
             <TextSection contentType='Projects'/>
+            <TextSection contentType='GetToKnow'/>
             <TextSection contentType='Contact'/>
             <Footer/>
         </Content>

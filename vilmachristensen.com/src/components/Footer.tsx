@@ -29,7 +29,6 @@ const Footer: React.FC = () => {
                 </InnerLeft>
             </Left>
             <Right>
-            <Footer_text>Made by Vilma Christensen</Footer_text>
             </Right>
         </Content>
     )
