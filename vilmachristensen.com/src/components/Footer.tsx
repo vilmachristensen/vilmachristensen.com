@@ -51,8 +51,8 @@ padding-bottom: 2%;
 padding-top: 2%;
 
 @media (max-width: 560px) {
-    display: grid;
-    grid-template-rows: auto auto; 
+    grid-template-columns: 1fr;
+    gap: 10px;
     justify-content: center; 
     padding-bottom: 5%;
     padding-top: 5%;

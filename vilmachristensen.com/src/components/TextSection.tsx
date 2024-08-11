@@ -37,7 +37,11 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                 <Section backgroundColor={Colors.white}>
                     <Upper>
                         <Header_medium_black>About me</Header_medium_black>
-                        <Default_text_black>I am 25 years old and approaching my final year as a student in an M.Sc. program in Engineering in Interaction, Technology, and Design. One of the reasons I chose this program is that it offers the perfect combination of design and creative thinking with mathematics, programming, and problem-solving. Through my studies and work experience, I have come to understand that development is what I enjoy most. I'm excited to continue developing in these areas!</Default_text_black>
+                        <Default_text_black>I am 25 years old and approaching my final year as a student in an M.Sc. program in Engineering in 
+                            Interaction, Technology, and Design at Umeå University. One of the reasons I chose this program is that it offers the perfect combination of 
+                            design and creative thinking with mathematics, programming, and problem-solving. Through my studies and work experience, 
+                            I have come to understand that development is what I enjoy most. I'm excited to continue developing in these areas!
+                            </Default_text_black>
                     </Upper>
                     <Lower>
                         <InnerGrid>
@@ -99,7 +103,6 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                         <Header_medium_black>Projects</Header_medium_black>
                         <Default_text_black>During my studies, I have engaged in various projects. I have developed skills in both
                             front-end and back-end development, UX/UI design, and working with SCRUM and agile project management.
-                            Explore some of them down below👇🏼
                         </Default_text_black>
                     </Upper>
                     <ProjectGrid>
@@ -195,7 +198,7 @@ box-sizing: border-box;
 overflow: hidden; 
 
 @media (max-width: 700px) {
-    padding: 20% 10% 20% 10%;
+    padding: 15% 10% 15% 10%;
   }
 
 `;
@@ -217,26 +220,36 @@ gap: 20px;
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
 `;
 
 const Lower = styled.div`
-display: grid;
-grid-template-columns: 33% 33% 33%; 
-gap: 100px;
+display: flex;
+justify-content: space-between; 
+align-items: flex-start; 
+justify-self: center;
+flex-wrap: wrap; 
+gap: 20px;
 
-@media (max-width: 1000px) {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
+@media (max-width: 768px) {
+  flex-direction: column;
+}
 
 `;
 
 const InnerGrid = styled.div`
 display: flex;
-flex-direction: column;
-justify-content: flex-baseline;
-gap: 20px;
+flex-direction: column; 
+padding: 10px;
+box-sizing: border-box; 
+flex: 1; 
+max-width: 30%;
+min-width: 200px;
+gap: 15px;
+
+@media (max-width: 768px) {
+  max-width: 100%; 
+}
 `;
 
 const ProjectGrid = styled.div`
@@ -250,7 +263,7 @@ grid-template-columns: 0.8fr 1.2fr;
 grid-template-rows: 1fr; 
 gap: 20px 50px; 
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -263,7 +276,7 @@ grid-template-columns: 1.5fr 0.5fr;
 grid-template-rows: 1fr; 
 gap: 20px 50px; 
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -272,11 +285,11 @@ gap: 20px 50px;
 const Contact = styled.div`
 display: grid; 
 grid-template-rows: auto auto auto; 
-gap: 20px; 
+gap: 10px; 
 
 @media (max-width: 700px) {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 10px;
   }
 
 `;

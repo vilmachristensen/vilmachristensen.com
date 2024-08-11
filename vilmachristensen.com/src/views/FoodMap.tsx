@@ -44,6 +44,8 @@ display: grid;
 grid-template-rows: auto auto auto auto; 
 gap: 0px;
 background-color: ${Colors.white};
+max-width: 100%;
+overflow-x: hidden;
 `;
 
 

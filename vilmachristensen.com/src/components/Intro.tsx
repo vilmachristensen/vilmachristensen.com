@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import {
     Default_text_big_white, Default_text_big_black, Default_text_black, Default_text_white,
-    Header_white, Header_black, Header_medium_black, Header_medium_white, Header_responsive_white,
-    Header_responsive_black
+    Header_white, Header_black, Header_medium_black, Header_medium_white
 } from '../styles/Text';
 import Profilepicture from '../assets/Profile_picture.jpg'
 import Colors from '../styles/Colors';
@@ -41,75 +40,44 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
             {contentType == "Profile" ?
                 <><Section content='Profile' gradientColor1={Colors.navy} gradientColor2={Colors.navy}>
                     <Left content={contentType}>
-                        {windowWidth < 800 ?
-                            <><Header_responsive_white>Hi,
-                                <br></br>
-                                I’m Vilma Christensen</Header_responsive_white>
-                                <Default_text_white>
-                                    A passionate (and nerdy 🤓) learner who enjoys front-end
-                                    development and making services easier to use
-                                </Default_text_white></>
-                            :
-                            <><Header_white>Hi,
-                                <br></br>
-                                I’m Vilma Christensen</Header_white><Default_text_big_white>
-                                    A passionate (and nerdy 🤓) learner who enjoys front-end
-                                    development and making services easier to use
-                                </Default_text_big_white></>}
+                        <><Header_white>Hi,
+                            <br></br>
+                            I’m Vilma Christensen</Header_white><Default_text_big_white>
+                                A passionate (and nerdy 🤓) learner who enjoys front-end
+                                development and making services easier to use. Explore my projects
+                                below or <Link href='mailto:vilma.m.christensen@gmail.com'>contact me</Link> right away!
+                            </Default_text_big_white></>
                     </Left>
                 </Section><ProfilePicture src={Profilepicture} /></>
                 : (contentType === "Kurr Ads Manager" || contentType === "Recipes2Rescue") ?
                     <><Section content='Project' gradientColor1={gradientColor1 || ''} gradientColor2={gradientColor2 || ''} >
                         <Left content={contentType}>
-                            {windowWidth < 800 ?
-                                <><Header_responsive_black>{header}</Header_responsive_black>
-                                    <Default_text_black>
-                                        <i>{info}</i>
-                                    </Default_text_black>
-                                    <Default_text_black>
-                                        <b>Course:</b> {course}
-                                    </Default_text_black>
-                                    <Default_text_black>
-                                        <b>Tools:</b> {tools}
-                                    </Default_text_black></>
-                                :
-                                <><Header_black>{header}</Header_black>
-                                    <Default_text_big_black>
-                                        <i>{info}</i>
-                                    </Default_text_big_black>
-                                    <Default_text_big_black>
-                                        <b>Course:</b> {course}
-                                    </Default_text_big_black>
-                                    <Default_text_big_black>
-                                        <b>Tools:</b> {tools}
-                                    </Default_text_big_black></>}
+
+                            <><Header_black>{header}</Header_black>
+                                <Default_text_big_black>
+                                    <i>{info}</i>
+                                </Default_text_big_black>
+                                <Default_text_big_black>
+                                    <b>Course:</b> {course}
+                                </Default_text_big_black>
+                                <Default_text_big_black>
+                                    <b>Tools:</b> {tools}
+                                </Default_text_big_black></>
                         </Left>
                     </Section><Picture content={contentType} src={picture} /></>
 
                     : <><Section content='Project' gradientColor1={gradientColor1 || ''} gradientColor2={gradientColor2 || ''} >
                         <Left content={contentType}>
-                            {windowWidth < 800 ?
-                                <><Header_responsive_white>{header}</Header_responsive_white>
-                                    <Default_text_white>
-                                        <i>{info}</i>
-                                    </Default_text_white>
-                                    <Default_text_white>
-                                        <b>Course:</b> {course}
-                                    </Default_text_white>
-                                    <Default_text_white>
-                                        <b>Tools:</b> {tools}
-                                    </Default_text_white></>
-                                :
-                                <><Header_white>{header}</Header_white>
-                                    <Default_text_big_white>
-                                        <i>{info}</i>
-                                    </Default_text_big_white>
-                                    <Default_text_big_white>
-                                        <b>Course:</b> {course}
-                                    </Default_text_big_white>
-                                    <Default_text_big_white>
-                                        <b>Tools:</b> {tools}
-                                    </Default_text_big_white></>}
+                            <><Header_white>{header}</Header_white>
+                                <Default_text_big_white>
+                                    <i>{info}</i>
+                                </Default_text_big_white>
+                                <Default_text_big_white>
+                                    <b>Course:</b> {course}
+                                </Default_text_big_white>
+                                <Default_text_big_white>
+                                    <b>Tools:</b> {tools}
+                                </Default_text_big_white></>
                         </Left>
                     </Section><Picture content={contentType} src={picture} /></>
             }
@@ -133,6 +101,21 @@ display: grid;
 grid-template-columns: ${(props) => (props.content !== "Profile" ? '50% 50%' : '60% 40%')};
 background-image: linear-gradient(170deg, ${(props) => (props.gradientColor1)}, ${(props) => (props.gradientColor2)});
 position: relative;
+
+@media (max-width: 560px) {
+    grid-template-columns: 100%;
+  }
+`;
+
+const Link = styled.a`
+text-decoration: none;
+color: #FBE87C;
+font-weight: 600;
+
+&:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
 `;
 
 const Left = styled.div<{ content: string }>`
@@ -145,7 +128,9 @@ const Left = styled.div<{ content: string }>`
 
   @media (max-width: 560px) {
     position: relative;
-    padding-top: ${(props) => (props.content == "FoodMap" || props.content == "HotSpot" ? '120%' : '90%')};
+    padding-top: ${(props) => (props.content == "FoodMap" || props.content == "HotSpot" ? '65%' : props.content == "Recipes2Rescue" || props.content == "Actus" ? '60%' : '47%')};
+    padding-bottom: 20%;
+    padding-right: 10%;
   }
 `;
 
@@ -173,6 +158,7 @@ top: ${(props) => (props.content == "LandLog" ? '-16%' : '-5%')};
 @media (max-width: 560px) {
 max-width: ${(props) => (props.content == "FoodMap" ? '30%' : props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" || props.content == "LandLog" || props.content == "Luckan" || props.content == "Actus" ? '60%' : '50%')};
 top: ${(props) => (props.content == "LandLog" ? '-5%' : '-2%')};
+right: ${(props) => (props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" ? '10%' : props.content == "FoodMap" || props.content == "HotSpot" || props.content == "Actus" ? '10%' : props.content == "Recipes2Rescue" ? '20%' : '5%')};
   }
 `;
 
