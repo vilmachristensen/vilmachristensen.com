@@ -37,11 +37,14 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                 <Section backgroundColor={Colors.white}>
                     <Upper>
                         <Header_medium_black>About me</Header_medium_black>
-                        <Default_text_black>I am 25 years old and approaching my final year as a student in an M.Sc. program in Engineering in 
-                            Interaction, Technology, and Design at Umeå University. One of the reasons I chose this program is that it offers the perfect combination of 
-                            design and creative thinking with mathematics, programming, and problem-solving. Through my studies and work experience, 
-                            I have come to understand that development is what I enjoy most. I'm excited to continue developing in these areas!
-                            </Default_text_black>
+                        <Default_text_black>
+                            I am 25 years old and currently pursuing my final year as a student in the M.Sc. program in
+                            Engineering in Interaction, Technology, and Design at Umeå University. One of the reasons I
+                            chose this program is that it offers the perfect combination of design and creative thinking
+                            with mathematics, programming, and problem-solving. Through my studies and work experience,
+                            I have come to understand that development is what I enjoy most. I'm excited to continue
+                            growing in these areas!
+                        </Default_text_black>
                     </Upper>
                     <Lower>
                         <InnerGrid>
