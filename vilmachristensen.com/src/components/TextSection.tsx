@@ -39,7 +39,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                         <Header_medium_black>About me</Header_medium_black>
                         <Default_text_black>
                             I am 25 years old and currently pursuing my final year as a student in the M.Sc. program in
-                            Engineering in Interaction, Technology, and Design at Umeå University. One of the reasons I
+                            Engineering in Interaction Technology, and Design at Umeå University. One of the reasons I
                             chose this program is that it offers the perfect combination of design and creative thinking
                             with mathematics, programming, and problem-solving. Through my studies and work experience,
                             I have come to understand that development is what I enjoy most. I'm excited to continue
@@ -52,7 +52,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                                 🎓 Education
                             </Header_small_black>
                             <Default_text_black>
-                                M.Sc in Engineering in Interaction, Technology and Design,<br></br>
+                                M.Sc in Engineering in Interaction Technology and Design,<br></br>
                                 <i>Umeå University</i>
                                 <br></br><br></br>
                                 Exchange semester,<br></br>
