@@ -43,7 +43,7 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
                         <><Header_white>Hi,
                             <br></br>
                             I’m Vilma Christensen</Header_white><Default_text_big_white>
-                                A passionate (and nerdy 🤓) learner who enjoys front-end
+                                An ambitious (and a bit nerdy 🤓) software developer who enjoys front-end
                                 development and making services easier to use. Explore my projects
                                 below or <Link href='mailto:vilma.m.christensen@gmail.com'>contact me</Link> right away!
                             </Default_text_big_white></>

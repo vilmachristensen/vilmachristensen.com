@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name }) => {
   return (
     <div>
       <Card gradientColor1={project.gradientColor1} gradientColor2={project.gradientColor2} onClick={handleClick}>
-        <img src={project.img} alt={project.header} style={{ justifySelf: "center", alignSelf: "center", maxWidth: "90%", maxHeight: "400px" }} />
+        <Picture src={project.img} alt={project.header} />
         <TextContent>
           {name === "Kurr Ads Manager" || name === "Recipes2Rescue" || name === "LandLog" || name === "Luckan" ?
             <>
@@ -103,17 +103,36 @@ transition: transform 0.3s ease;
     cursor: pointer;
 }
 
+@media (max-width: 560px) {
+
+}
+
 `;
 
 const TextContent = styled.div`
   display: grid;
   grid-template-rows: auto auto;
   gap: 10px;
-  padding: 30px;p
+  padding: 30px;
   justify-self: left;
+
+  @media (max-width: 560px) {
+
+  }
+  
+`;
+
+const Picture = styled.img`
+justify-self: center;
+align-self: center;
+max-width: 90%;
+max-height: 400px;
+
+@media (max-width: 560px) {
+
+}
+
 `;
 
 
 export default ProjectCard;
-
-//grid-template-rows: 2.6fr 0.2fr 0.2fr; 
