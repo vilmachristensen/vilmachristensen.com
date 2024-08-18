@@ -32,7 +32,7 @@ const HotSpot: React.FC = () => {
             established, team members proceeded to design individual components in Figma, ensuring consistency and clarity throughout 
             the application. These components were then assembled into a cohesive hi-fi prototype. Both the lo-fi and hi-fi prototypes 
             were created using Figma.'
-            developText="The application was developed using React Native Expo and features a map displaying both personal and friends' pins. 
+            developText="The application was developed using React Native with Expo and features a map displaying both personal and friends' pins. 
             Authentication is managed via Firebase with email and password, while location data and mapping are integrated with Google 
             Places API and Apple Maps. The project was organized using a Kanban board on GitHub to structure and distribute tasks. 
             The implementation phase began with the creation of components in separate branches, handled individually. 

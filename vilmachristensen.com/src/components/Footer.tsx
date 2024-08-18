@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
     const handleClick = (type: string) => {
         if (type === "LinkedIn") {
-            window.location.href = 'https://linkedin.com/in/vilma-christensen-10a335231';
+            window.location.href = 'https://www.linkedin.com/in/vilma-christensen/';
         }
         else if (type === "Mail") {
             window.location.href = 'mailto:vilma.m.christensen@gmail.com';

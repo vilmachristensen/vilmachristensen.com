@@ -90,7 +90,7 @@ const Intro: React.FC<IntroProps> = ({ contentType, header, info, course, tools,
 const Content = styled.div`
 position: relative;
 padding-bottom: 0%;
-@media(min-width: 768px) {
+@media(max-width: 560px) {
     display: grid;
     grid-template-rows: auto auto;
   }
@@ -105,6 +105,7 @@ position: relative;
 @media (max-width: 560px) {
     grid-template-columns: 100%;
   }
+  
 `;
 
 const Link = styled.a`
@@ -128,7 +129,7 @@ const Left = styled.div<{ content: string }>`
 
   @media (max-width: 560px) {
     position: relative;
-    padding-top: ${(props) => (props.content == "FoodMap" || props.content == "HotSpot" ? '65%' : props.content == "Recipes2Rescue" || props.content == "Actus" ? '60%' : '47%')};
+    padding-top: ${(props) => (props.content == "FoodMap" || props.content == "HotSpot" ? '65%' : props.content == "Actus" ? '60%' : props.content == "Recipes2Rescue" ? '53%' : '43%')};
     padding-bottom: 20%;
     padding-right: 10%;
   }
@@ -149,8 +150,8 @@ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
 const Picture = styled.img<{ content: string }>`
-max-width: 45%;
-max-height: 100%;
+max-width: 42%;
+max-height: 90%;
 position: absolute;
 right: ${(props) => (props.content == "Kurr Ads Manager" ? '5%' : props.content == "FoodMap" || props.content == "HotSpot" ? '10%' : '5%')};
 top: ${(props) => (props.content == "LandLog" ? '-16%' : '-5%')};
@@ -159,7 +160,8 @@ top: ${(props) => (props.content == "LandLog" ? '-16%' : '-5%')};
 max-width: ${(props) => (props.content == "FoodMap" ? '30%' : props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" || props.content == "LandLog" || props.content == "Luckan" || props.content == "Actus" ? '60%' : '50%')};
 top: ${(props) => (props.content == "LandLog" ? '-5%' : '-2%')};
 right: ${(props) => (props.content == "Kurr Ads Manager" || props.content == "UmeaStigen" ? '10%' : props.content == "FoodMap" || props.content == "HotSpot" || props.content == "Actus" ? '10%' : props.content == "Recipes2Rescue" ? '20%' : '5%')};
-  }
+}
+
 `;
 
 export default Intro;
