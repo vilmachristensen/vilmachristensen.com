@@ -24,7 +24,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
             window.location.href = 'https://www.linkedin.com/in/vilma-christensen/';
         }
         else if (type === "Mail") {
-            window.location.href = 'mailto:vilma.m.christensen@gmail.com';
+            window.location.href = 'mailto:vilmamatildachristensen@gmail.com';
         }
         else {
             window.location.href = 'https://github.com/vilmachristensen';
@@ -136,7 +136,7 @@ const TextSection: React.FC<TextSectionProps> = ({ contentType, introText, desig
                             <br></br><br></br>
                             <Contact>
                                 <InnerContact onClick={() => handleClick('Mail')}>
-                                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} style={{ paddingRight: '20px' }} />vilma.m.christensen@gmail.com
+                                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} style={{ paddingRight: '20px' }} />vilmamatildachristensen@gmail.com
                                 </InnerContact>
                                 <InnerContact onClick={() => handleClick('LinkedIn')}>
                                     <FontAwesomeIcon size='1x' color={Colors.white} icon={faLinkedinIn} style={{ paddingRight: '20px' }} />LinkedIn

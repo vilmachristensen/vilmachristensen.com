@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             window.location.href = 'https://www.linkedin.com/in/vilma-christensen/';
         }
         else if (type === "Mail") {
-            window.location.href = 'mailto:vilma.m.christensen@gmail.com';
+            window.location.href = 'mailto:vilmamatildachristensen@gmail.com';
         }
     };
 
@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                     <FontAwesomeIcon size='1x' color={Colors.white} icon={faLinkedinIn} /> <Footer_text style={{ textDecoration: 'underline' }}>LinkedIn</Footer_text>
                 </InnerLeft>
                 <InnerLeft onClick={() => handleClick('Mail')}>
-                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} /> <Footer_text style={{ textDecoration: 'underline' }}>vilma.m.christensen@gmail.com</Footer_text>
+                    <FontAwesomeIcon size='1x' color={Colors.white} icon={faEnvelope} /> <Footer_text style={{ textDecoration: 'underline' }}>vilmamatildachristensen@gmail.com</Footer_text>
                 </InnerLeft>
             </Left>
         </Content>
